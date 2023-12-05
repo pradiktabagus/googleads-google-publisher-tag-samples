@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+ @license
+ Copyright 2022 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Monitor and report on ad events fired by GPT."
+    />
+    <title>Ad event listeners</title>
+    <script
+      async
+      src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
+    ></script>
+    <script type="module" src="/sample.ts"></script>
+    <style>
+      .status,
+      .status-row {
+        display: inline-table;
+        width: 750px;
+      }
+
+      .status-container {
+        height: 400px;
+        overflow: scroll;
+        width: 100%;
+      }
+
+      .status-row:nth-child(even) {
+        background-color: lightsteelblue;
+      }
+
+      .status-cell {
+        float: left;
+        min-width: 15%;
+      }
+
+      .status-detail {
+        margin: 0;
+        padding-left: 1em;
+      }
+
+      .event {
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <span>popbela - div-gpt-ad-leaderboard</span>
+    <div id="div-gpt-ad-leaderboard" style="width: 970px; height: 250px"></div>
+    <span>popbela - div-gpt-ad-infeed1</span>
+    <div id="div-gpt-ad-infeed1" style="width: 728px; height: 90px"></div>
+    <span>popbela - div-gpt-ad-sticky</span>
+    <div id="div-gpt-ad-sticky" style="width: 728px; height: 90px"></div>
+
+    <span>popbela - div-gpt-ad-mr1</span>
+    <div id="div-gpt-ad-mr1" style="width: 750px; height: 250px"></div>
+    <span>detik Wolipop</span>
+    <div id="div-gpt-ad-1534858187231-0" style="width: 300px; height: 600px"></div>
+    <div class="status">
+      <div class="status-row">
+        <div class="status-cell"><b>Slot</b></div>
+        <div class="status-cell event"><b>Event</b></div>
+        <div class="status-cell"><b>Time from ad request</b></div>
+      </div>
+
+      <div class="status-container"></div>
+    </div>
+  </body>
+</html>
